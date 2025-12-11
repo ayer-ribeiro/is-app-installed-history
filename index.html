@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>Is App Installed - History</h1>
-	<pre id="result">Loading...</pre>
+	<button onclick="showInstalledRelatedApps()">Check Installed Apps</button>
+	<pre id="result">Click the button to check installed apps...</pre>
 	<script>
 		async function showInstalledRelatedApps() {
 			if (window.navigator.getInstalledRelatedApps) {
@@ -22,7 +23,6 @@
 				document.getElementById('result').textContent = 'getInstalledRelatedApps is not supported in this browser.';
 			}
 		}
-		showInstalledRelatedApps();
 	</script>
 </body>
 </html>
